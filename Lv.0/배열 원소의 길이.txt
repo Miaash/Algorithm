@@ -1,0 +1,12 @@
+function solution(strlist) {
+    solution 1)
+    let array = [];
+    for(let i = 0; i < strlist.length; i++) {
+        array.push(strlist[i].length)
+    }
+    return array;
+
+    solution 2)
+    return strlist.map((el) => el.length)
+
+}
