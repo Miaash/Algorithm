@@ -1,0 +1,4 @@
+function solution(array) {
+    let bigger = Math.max(...array)
+    return  [bigger, array.indexOf(bigger)]
+}
