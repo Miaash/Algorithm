@@ -1,0 +1,11 @@
+function solution(money) {
+    solution 1)
+    let result = [];
+    let amount = Math.floor(money / 5500);
+    let change = money - (5500 * amount);
+    result = [amount, change];
+    return result;
+
+    solution 2)
+    return [Math.floor(money / 5500), money % 5500]
+}
