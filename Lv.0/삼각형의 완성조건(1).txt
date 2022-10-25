@@ -1,0 +1,5 @@
+function solution(sides) {
+    let newSides = sides.sort();
+    let sum = newSides[0] + newSides[1]
+    return sum > newSides[2] ? 1 : 2;
+}
