@@ -1,0 +1,15 @@
+function solution(n) {
+    solution 1)
+    let pizza = 0;
+    if(n <= 7) {
+        pizza = 1;    
+    } else if( n % 7 === 0) {
+        pizza = parseInt(n/7);
+    } else if( n > 7) {
+        pizza = parseInt(n/7) + 1;
+    } 
+    return pizza;
+
+    solution 2)   
+    return Math.ceil(n / 7);
+}
