@@ -1,0 +1,8 @@
+function solution(n) {
+    solution 1)
+    let number = Math.sqrt(n);
+    return n % number === 0 ? 1 : 2;
+
+    solution 2)
+    return Number.isInteger(Math.sqrt(n)) ? 1 : 2;
+}
