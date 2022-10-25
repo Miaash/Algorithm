@@ -1,0 +1,8 @@
+function solution(my_string, letter) {
+    solution 1)
+    const a = my_string.split('');
+    return a.filter((el) => el !== letter).join('');
+
+    solution 2)
+    return my_string.replaceAll(letter, '');
+}
