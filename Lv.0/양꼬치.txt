@@ -1,0 +1,6 @@
+function solution(n, k) {
+    let mainMenu = 12000 * n;
+    let drink = 2000 * k;
+    let free = 2000 * Math.floor(n/10)
+    return mainMenu + drink - free
+}
