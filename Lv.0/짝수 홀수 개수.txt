@@ -1,0 +1,17 @@
+function solution(num_list) {
+    let evenNumbers = 0, oddNumbers = 0;
+    let result = [];
+    for(let i = 0; i <= num_list.length; i++) {
+        if(num_list[i] % 2 === 0) {
+            evenNumbers++
+        }
+        
+         if(num_list[i] % 2 === 1) {
+            oddNumbers++
+        }
+    }
+    result.push(evenNumbers);
+    result.push(oddNumbers);
+    return result;
+    
+}
