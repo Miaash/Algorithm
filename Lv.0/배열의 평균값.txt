@@ -1,0 +1,12 @@
+function solution(numbers) {
+    solution 1)
+    let result = 0;
+    const length = numbers.length;
+    for(let i = 0; i < numbers.length; i++) {
+         result = result + (numbers[i]/length);
+        }
+    return result;
+
+    solution 2)
+    return numbers.reduce((acc,cur) => acc+cur, 0)/numbers.length
+}
