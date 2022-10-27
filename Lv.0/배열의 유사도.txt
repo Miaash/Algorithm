@@ -1,0 +1,9 @@
+function solution(s1, s2) {
+    solution 1)
+    let arr = s1.concat(s2);
+    return arr.filter((item, index) => arr.indexOf(item) !== index).length
+    
+
+    solution 2)
+    return s1.filter((el) => s2.includes(el)).length;
+}
