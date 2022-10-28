@@ -1,0 +1,8 @@
+function solution(my_string) {
+    solution 1)
+    return my_string.replace(/a|e|i|o|u/g,'')
+
+    solution 2)
+    return my_string.replace(/[aeiou]/g,'')
+
+}
