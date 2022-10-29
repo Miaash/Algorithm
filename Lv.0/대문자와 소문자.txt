@@ -1,0 +1,12 @@
+function solution(my_string) {
+    solution 1)
+    return my_string.split('').map((el) => (el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase())).join('')
+    
+    solution 2)
+    const arr = my_string.split('');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == arr[i].toLowerCase()) arr[i] = arr[i].toUpperCase();
+        else arr[i] = arr[i].toLowerCase();
+    }
+    return arr.join('');
+}
