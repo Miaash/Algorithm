@@ -1,0 +1,10 @@
+function solution(box, n) {
+    solution 1) 단순 곱셈 나열 풀이법 Math.floor()메서드 반복
+    return Math.floor(box[0]/n) * Math.floor(box[1]/n) * Math.floor(box[2]/n);
+
+    solution 2) map메서드로 묶어주기
+    return box.map((el) => Math.floor(el/n)).reduce((a,b) => a * b, 1);
+
+    solution 3) 틸트연산자 사용
+    return box.map((el) => ~~(el/n)).reduce((a,b) => a * b, 1);
+}
