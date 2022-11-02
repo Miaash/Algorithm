@@ -1,0 +1,6 @@
+// 6의 배수 중 n으로 나누어 떨어지는 수 
+function solution(n) {
+    for(let i = 1; i <= n; i++) {
+        if(6*i%n===0) return i;
+    }
+}
