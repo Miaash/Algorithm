@@ -1,0 +1,20 @@
+function solution(numbers, direction) {
+    // 왜 변수에 담으면 안 되는걸까?
+    // let rightNum = numbers.pop();
+    // let leftNum = numbers.shift();
+
+    solution 1)
+    // if(direction === "right") {
+    //     numbers.unshift(numbers.pop())
+    //     return numbers;
+    // } else if(direction === "left") {
+    //     numbers.push(numbers.shift())
+    //     return numbers;
+    // }
+
+    solution 2) 삼항연산자 활용
+    direction === "right" ?  
+        numbers.unshift(numbers.pop()) : numbers.push(numbers.shift())
+    return numbers;
+        
+}
