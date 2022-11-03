@@ -1,0 +1,7 @@
+// ASCII(미국표준정보교환코드: 컴퓨터 내부에서 문자를 표현하는데 사용)
+// String.fromCharCode() -> 아스키코드 번호를 받아 문자열을 구성해줌
+// charCodeAt() -> 문자열 중 하나를 아스키코드 번호로 변환해줌
+// String.fromCharCode() = "a"
+function solution(age) {
+    return age.toString().split('').map((el) => String.fromCharCode(97+Number(el))).join('')
+}

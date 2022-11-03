@@ -1,0 +1,9 @@
+// 1. 배열을 숫자 크기순대로 정렬
+// 2. Math.max(a,b)를 사용해 두 수 중에 큰 수 를 반환. (음수의 곱은 양수로 최댓값이 될 수 있기 때문)
+// 3. a는 정렬된 배열의 첫번째원소 * 두번쨰 원소
+// 4. b는 정렬된 배열의 마지막원소 * 마지막원소-1
+function solution(numbers) {
+  const sorted = numbers.sort((a, b) => a - b);
+  return Math.max(sorted[0] * sorted[1], sorted[sorted.length - 1] * sorted[sorted.length - 2]);
+
+}
