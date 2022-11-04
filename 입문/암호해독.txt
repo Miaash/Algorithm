@@ -1,0 +1,14 @@
+function solution(cipher, code) {
+    solution 1)
+    // let newArr = [];
+    // const arr = cipher.split('');
+    // let length  = Math.ceil(arr.length/code);
+    // for(let i = 1; i <= length; i++) {
+    //     newArr.push(arr[code*i - 1]);
+    // }
+    // return newArr.join('');
+    
+     solution 2)
+    // v는 요소 값, i는 인덱스
+     return cipher.split('').filter((v, i)=>(i+1)%code===0).join('');
+}
