@@ -1,0 +1,5 @@
+function solution(order) {
+    let arr = ["3", "6", "9"]
+    // || or연산자 사용
+    return order.toString().split('').filter((el) => el === "3" || el === "6" || el === "9").length
+}
