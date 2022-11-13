@@ -1,0 +1,20 @@
+function solution(letter) {
+    const morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+    }
+    // solution (1)
+    // 공백으로 문자열 나눠 배열에 담기
+    // let array = letter.split(" ");
+    // let newArr = [];
+    //  for (let i = 0; i <= array.length; i++) {
+    //      newArr.push(morse[array[i]])
+    //  }
+    // return newArr.join('')
+    
+    // solution (2)
+    return letter.split(' ').map((el) => morse[el]).join('');
+}
