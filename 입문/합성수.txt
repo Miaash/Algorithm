@@ -1,0 +1,14 @@
+function solution(n) {
+    let result = 0;
+    for(let i = 1; i <= n; i++) {
+        let count = 0;
+        // 내부 for문의 j <= i이 만족할 때까지 반복 한 뒤, 외부 for문으로 다시 돌아감
+        for(let j = 0; j <= i; j++) {
+            if(i % j === 0) count ++;
+        }
+        // 나눴을 때 0이 되는 수 즉, 약수의 개수가 3이상일 때
+        if (count >= 3) result ++
+    }
+    return result;
+
+}
