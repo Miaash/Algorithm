@@ -1,0 +1,20 @@
+function solution(before, after) {
+    // 여기서 join('') 또는 toString()메서드를 사용해 배열을 문자열(문자열 타입)로 바꿔준 뒤, 일치연산자를 사용해야한다.
+    // 배열은 reference 타입으로써 값이 비교 되는 것이 아닌 주소값이 비교되기 때문에 동등, 일치 연산자로 비교를 하게 되면 주소값을 비교하게 되는데, 배열은 객체이므로 식별자는 값이 담겨있는 주소를 담은 메모리를 가리키고 이 주소를 비교하기 때문에 false값으로 나오게 된다. 
+
+    // solution (1)
+    return before.split('').sort().join('') == after.split('').sort().join('') ? 1 : 0;
+    
+    // solution (2)
+    const a = before.split('');
+    const b = after.split('');
+ 
+    const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]); 
+ 
+    a.sort();
+    b.sort();
+ 
+    return equals(a, b) ? 1 : 0; å
+    }
+
+
