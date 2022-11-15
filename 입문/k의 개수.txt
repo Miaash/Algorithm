@@ -1,9 +1,15 @@
 function solution(i, j, k) {
+    solution (1) 11, 22와 같이 중복 될 때 count가 안된다.
     let count = 0;
     for(let a = i; a <= j; a++) {
         if(a.toString().split('').includes(k.toString())) count ++;
     }
     return count;
     
-    // 11, 22와 같이 두개일 때 어떻게 처리할 것인가
+    solution (2) 보완한 솔루션 => 배열에 숫자를 i부터 j까지 string 타입으로 바꿔서 담아준 뒤, k랑 비교할 때는 숫자형으로 변환한 뒤 비교 후 filter 메서드를 통해 참일 경우 filtering되어 배열에 담길 수 있도록 한다. 그 배열의 길이가 count가 되며  최종 누적값이 return 된다.
+    let count = 0;
+    for (let num = i; num <= j; num++) {
+        count += [...('' + num)].filter(n => +n === k).length;
+    }
+    return count;
 }
