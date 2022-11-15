@@ -1,0 +1,9 @@
+function solution(i, j, k) {
+    let count = 0;
+    for(let a = i; a <= j; a++) {
+        if(a.toString().split('').includes(k.toString())) count ++;
+    }
+    return count;
+    
+    // 11, 22와 같이 두개일 때 어떻게 처리할 것인가
+}
