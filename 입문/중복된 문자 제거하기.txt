@@ -1,0 +1,23 @@
+function solution(my_string) {
+    // 문자열 my_sting 매개변수
+    // 중복된 문자 제거 후 가장 앞에 하나의 문자만을 남기고 return
+    // 대문자 소문자 구분
+    // 공백도 하나의 문자로 구분
+    // people -> peol (p, e 하나씩 제거)
+    
+    let strArr = my_string.split('');
+
+    return strArr.filter((el, idx) => strArr.indexOf(el) === idx).join('');
+    // filter 메서드에서 el은 처리할 현재요소, idx는 처리할 현재요소의 인덱스
+    // indexOf 메서드는 배열에서 첫번째에 해당하는 요소의 인덱스를 반환.
+    // el = 'p' : 0(indexOf(el)) === idx = 0
+    // el = 'e' : 1 === idx = 1
+    // el = 'o' : 2 === idx = 2
+    // el = 'p' : 0 !== idx = 3
+    // el = 'l' : 4 === idx = 4
+    // el = 'e' : 1 !== idx = 5
+    // ['p', 'e', 'o', 'l']
+    
+    // solution 2) Set 객체 사용하기 - 자료형에 상관없이 유일한 값을 저장함
+    return [...new Set(my_string)].join('');
+}
