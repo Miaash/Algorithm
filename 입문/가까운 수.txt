@@ -1,0 +1,11 @@
+function solution(array, n) {
+    // let newArr = array.map((el) => Math.abs(el - n)).sort((a, b) => a - b);
+    // return newArr[0] + n;
+    
+    // solution) 
+    // 1) 배열요소 - n 에서 최솟값을 구한다 (차이 적은 수가 가장 가까운 수))
+    // minNum = -17, 10, 8 => -17
+    // [3, 10, 28] 정렬 후, 이 요소 중 - n 을 한 값이 -17과 같은 요소를 return 
+    const minNum = Math.min(...array.map(a => Math.abs(a - n)));
+    return array.sort((a, b) => a - b).find(a => Math.abs(a - n) === minNum);
+}
