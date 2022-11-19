@@ -1,0 +1,13 @@
+function solution(emergency) {
+    // 1) 내림차순
+    // 2) 원본배열에서 내림차순 한 배열의 인덱스를 찾아 return 
+    // 3) 원본배열을 변경하지 않기 위해 한번 원본배열을 복사해서 사용 => slice()
+    // emergency = [30, 10, 23, 6, 100]
+    // sorted = [100, 30, 23, 10, 6]
+    // sorted에서 원본 배열의 요소의 인덱스 값을 찾기.
+    // [1, 3, 2, 4, 0] => +1 => [2, 4, 3, 5, 1]
+    
+    let sorted = emergency.slice().sort((a, b) => b - a);
+    return emergency.map(v => sorted.indexOf(v) + 1);
+    
+}
