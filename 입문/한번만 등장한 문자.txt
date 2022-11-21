@@ -1,5 +1,11 @@
-// 문자열 S (매개변수)에서 한번만 등장한 문자 return
 function solution(s) {
-    var answer = '';
-    return answer;
+    // for of 명령문 사용하기
+    // for of 명령문은 iterable(반복가능한객체: str, array, set, map, typedarray)에 대해 반복하여 루프생성.
+    // 따라서 문자열의 요소를 앞에서 해당 요소가 있는지 찾고 뒤에서 해당 요소가 있는 찾고, 이 둘을 일치연산자로 비교.
+    // 이때 다르면 그 요소가 두번 이상 나왔다는 것이고 같으면 같은 인덱스를 나타내서 if문을 true로 통과하여 빈배열에 담김.
+    // 빈배열을 정렬하고 문자열로 합침
+    let res = [];
+    for (let c of s) if (s.indexOf(c) === s.lastIndexOf(c)) res.push(c);
+    return res.sort().join('');
+
 }
