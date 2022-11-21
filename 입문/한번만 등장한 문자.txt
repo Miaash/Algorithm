@@ -1,0 +1,5 @@
+// 문자열 S (매개변수)에서 한번만 등장한 문자 return
+function solution(s) {
+    var answer = '';
+    return answer;
+}
