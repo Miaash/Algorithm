@@ -1,4 +1,5 @@
 var twoSum = function (nums, target) {
+  // Sudo Code
   // input: 정수배열 nums, taget지수
   // 졍수배열에 있는 숫자들의 합으로 target을 만들어야함
   // output은 배열 속 숫자들의 합이 target이 되는 숫자의 인덱스를 담은 배열
@@ -11,23 +12,6 @@ var twoSum = function (nums, target) {
   // 이때 합이 7이 되는 인덱스는 nums[2], nums[3] => 이것의 인덱스를 어떻게 빈배열에 담을 것인가?
   // [2, 3] => output
 
-  // 1) brute force way
-  // for(let i = 0; i < nums.length; i++) {
-  //     if(nums[i]+nums[i + 1] === target || nums[i] + nums[i + 2] === target || nums[i] + nums[i + 3] === target || nums[i] + nums[i + 4] === target) {
-  //         if(nums[i]+nums[i + 1] === target) {
-  //         return [i, i + 1];
-  //         } else if(nums[i] + nums[i + 2] === target)  {
-  //             return [i, i + 2];
-  //         } else if(nums[i] + nums[i + 3] === target)  {
-  //             return [i, i + 3];
-  //         }  else if(nums[i] + nums[i + 4] === target)  {
-  //             return [i, i + 4];
-  //         }
-  //     }
-  // }
-  //  nums = [1, 2, 3, 4] , target = 7 , output = [2, 3]
-  //
-  // 2) another way
   // 중첩된 반복문의 사용
   for (let i = 0; i < nums.length; i++) {
     let first = nums[i];
