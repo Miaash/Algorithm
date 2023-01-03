@@ -43,15 +43,15 @@ The minimum sum can be obtained by the pair [4, 9]: 4 + 9 = 13.
 
 문자열을 숫자타입으로 바꿔주는 메서드 `parseInt()`와 `Number()`의 차이는 무엇일까?
 
-1. '년도'가 포함된 문자열을 변환해보았다.
-   여기서 보면 '년도'라는 문자를 parseInt()는 포함시키지 않고 2020부분만 숫자로 바꿔준다.
-   `let test = '2020년도';
+1. '년도'가 포함된 문자열을 변환해보았다. 
+- 여기서 보면 '년도'라는 문자를 parseInt()는 포함시키지 않고 2020부분만 숫자로 바꿔준다.
+`let test = '2020년도';
 parseInt(test); // 2020
 Number(test); // NaN
 `
 
 2. 소수점으로 길게 늘어진 숫자로 된 문자열을 변환해보자.
-   `let test = '10.12345';
+`let test = '10.12345';
 parseInt(test); // 10
 Number(test); // 10.12345
 `
