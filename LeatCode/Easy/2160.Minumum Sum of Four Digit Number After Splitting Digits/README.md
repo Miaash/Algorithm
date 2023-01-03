@@ -39,7 +39,7 @@ Explanation: Some possible pairs [new1, new2] are [0, 49], [490, 0], etc.
 The minimum sum can be obtained by the pair [4, 9]: 4 + 9 = 13.
 `
 
-#### study :
+### Study :
 
 `문자열을 숫자타입으로 바꿔주는 메서드 `parseInt()`와 `Number()`의 차이는 무엇일까?
 
