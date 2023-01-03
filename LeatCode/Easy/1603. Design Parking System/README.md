@@ -16,7 +16,7 @@ solution 2)
 
 ### 구분
 
-- 배열
+- 생성자 함수와 class
 
 ### 채점결과
 
@@ -46,7 +46,6 @@ parkingSystem.addCar(2); // return true because there is 1 available slot for a 
 parkingSystem.addCar(3); // return false because there is no available slot for a small car
 parkingSystem.addCar(1); // return false because there is no available slot for a big car. It is already occupied.`
 
-#### Code
+### Study
+
 <img width="764" alt="스크린샷 2023-01-01 오후 5 36 50" src="https://user-images.githubusercontent.com/98681659/210172120-f4cb8d34-25b5-462f-b778-492265b57abe.png">
-
-
