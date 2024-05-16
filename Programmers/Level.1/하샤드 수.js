@@ -7,6 +7,8 @@
 // 2. split을 통해 배열로 만든뒤, 각 요소를 숫자타입으로 변경
 // 3. reduce 메서드로 각요소의 합을 구한다. (변수에 할당)
 // 4. 처음에 주어진 x를 각 요소의 합으로 나눴을 때 나머지가 0이면 true, 아니면 false 반환
+
+//[방법1] 통과 (0.07ms, 33.5MB)
 function solution(x) {
   const sum = (x + "")
     .split("")
@@ -14,3 +16,10 @@ function solution(x) {
     .reduce((a, b) => a + b);
   return x % sum === 0 ? true : false;
 }
+
+//[방법2] 통과 (0.04ms, 33.4MB)
+return !(x % ((x + "").split("").reduce((acc, cur) => +acc + +cur)));
+
+
+
+
