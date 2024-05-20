@@ -24,7 +24,7 @@ function solution(a, b) {
 // 여기서 a부터 b까지의 거리는 b > a, b - a / b < a, a - b일텐데 Math.abs()절댓값 메서드를 통해 음수를 양수로 변환.
 function solution(a, b) {
   let sum = 0;
-  return ((a + b) * (Math.abs(b - a) + 1)) / 2;
+  return ((a + b) * (Math.abs(a - b) + 1)) / 2;
 }
 
 // solution 3) 일년 뒤, 다시 풀음.
