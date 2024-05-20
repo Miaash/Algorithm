@@ -26,3 +26,24 @@ function solution(a, b) {
   let sum = 0;
   return ((a + b) * (Math.abs(b - a) + 1)) / 2;
 }
+
+// solution 3) 일년 뒤, 다시 풀음.
+// 길어진 로직...
+// 공부하자.!
+function solution(a, b) {
+    let sum = 0;
+    let num1 = a;
+    let num2 = b;
+    if(a > b) {
+        num1 = b;
+        num2 = a;
+    }
+    for(let i = num1; i <= num2; i++) {
+        if(num1 === num2) {
+            return num1;
+        } else {
+            sum = sum + i;   
+        }
+    }
+    return sum;
+}
