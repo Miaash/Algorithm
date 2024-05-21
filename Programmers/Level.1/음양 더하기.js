@@ -21,9 +21,23 @@ function solution(absolutes, signs) {
   return absolutes.reduce((acc, cur) => acc + cur, 0);
 }
 
+
+//solution 1-2)
+// 반복문과 조건문을 통해 새로운 배열에 push  후, 배열의 모든 요소를 더한 뒤 반환. 
+function solution(absolutes, signs) {
+    let sum = 0;
+    let newArr = [];
+    for(let i = 0; i < absolutes.length; i++) {
+      signs[i] === true ? newArr.push(absolutes[i] * 1) : newArr.push(absolutes[i] * -1);
+    }
+    return newArr.reduce((acc, cur) => acc + cur, 0);
+}
+
 //solution 2)
 // reduce 메서드의 인덱스 매개변수를 활용한 방법
 // reduce메서드로 더하면서 sign의 요소가 false면 -1을 더하고 아니면 1을 더하고 그 값을 acc와 더하여 배열의 합을 구한다.
 function solution(absolutes, signs) {
   return absolutes.reduce((acc, x, i) => acc + x * (signs[i] ? 1 : -1), 0);
+  // 위의 메서드를 아래와 같이 줄일 수 있음.
+  // return absolutes.reduce((acc, x, i) => acc + (signs[i] ? x : -x), 0)
 }
