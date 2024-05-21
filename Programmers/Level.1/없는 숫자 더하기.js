@@ -13,6 +13,7 @@ function solution(numbers) {
 }
 
 //solution2) 1-9의 합 45에서 주어진 배열의 합의 값을 빼기
+// 1~n까지의 합 : n(1+n)/2
 function solution(numbers) {
   return 45 - numbers.reduce((acc, cur) => acc + cur, 0);
 }
