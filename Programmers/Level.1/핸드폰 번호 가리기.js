@@ -26,6 +26,11 @@ function solution(phone_number) {
   return phone_number.replace(/\d(?=\d{4})/g, '*');
 }
 
+// solution 4) repeat()
+function solution(phone_number) {
+   return "*".repeat(phone_number.length - 4).concat(phone_number.slice(-4));
+}
+
 // 속도 측면에서 solution 1) 이 0.04ms로 가장 빨랐다. => solution 3) 도 replace를 사용했는데 왜 속도 차이가 많이 날까? 정규표현식때문일까?
 // 정규표현식의 복잡성:
 // 3번 메서드의 정규표현식은 각 숫자에 대해 뒤에 4개의 숫자가 있는지 확인해야 합니다. 이 과정은 많은 비교 연산을 필요로 하며, 문자열이 길어질수록 더 많은 연산을 수행해야 합니다.
