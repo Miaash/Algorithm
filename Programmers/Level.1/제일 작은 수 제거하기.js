@@ -13,3 +13,9 @@ function solution(arr) {
   const minNum = Math.min(...arr);
   return arr.filter((el) => el !== minNum);
 }
+
+// 삼항연산자로...
+function solution(arr) {
+    let minNum = Math.min(...arr);
+    return arr.length <= 1 ? [-1] : arr.filter((el) => el !== minNum);
+}
