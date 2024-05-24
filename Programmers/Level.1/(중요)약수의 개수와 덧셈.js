@@ -33,11 +33,11 @@ function solution(left, right) {
 // 테스트 7 〉	통과 (0.43ms, 33.6MB)
 
 // solution 2) Math.sqrt() 활용.
-// 제곱근이 정수면 약수의 갯수가 대칭이 아니므로 홀수, 정수가 아니라면 약수의 갯수가 대
+// 제곱근이 정수면 약수의 갯수가 대칭이 아니므로 홀수, 정수가 아니라면 약수의 갯수가 대칭을 이루며 짝수.
 function solution(left, right) {
   let result = 0;
   for(let i = left; i <= right; i++) {
-    if(Number.isInteger()) {
+    if(Number.isInteger(Math.sqrt(i))) {
       result -= i
     } else {
       result += i
